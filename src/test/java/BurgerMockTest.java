@@ -12,8 +12,8 @@ public class BurgerMockTest {
     Burger burger;
     @Mock
     Bun bun;
-    Ingredient firstIngredient = (Ingredient)Mockito.mock(Ingredient.class);
-    Ingredient secondIngredient = (Ingredient)Mockito.mock(Ingredient.class);
+    Ingredient firstIngredient = Mockito.mock(Ingredient.class);
+    Ingredient secondIngredient = Mockito.mock(Ingredient.class);
 
     public BurgerMockTest() {
     }

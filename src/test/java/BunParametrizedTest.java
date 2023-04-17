@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
+import org.apache.commons.lang3.RandomStringUtils;
 import praktikum.*;
 
 @RunWith(Parameterized.class) // запускаем тест с параметрами
@@ -19,8 +20,11 @@ public class BunParametrizedTest {
     public static Object[] getData() {
         return new Object[][] {
                 {db.availableBuns().get(0).name, db.availableBuns().get(0).price},
-                {db.availableBuns().get(1).name, db.availableBuns().get(1).price},
-                {db.availableBuns().get(2).name, db.availableBuns().get(2).price},
+                {RandomStringUtils.randomAlphabetic(214748364), 3.402823466E+38f},
+                {"b0_0|!4#a^^", -3.402823466E+38f},
+                {"Ъ", 1},
+                {null, 0},
+                {" ", -1},
         };
     }
 
